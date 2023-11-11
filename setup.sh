@@ -8,6 +8,9 @@ tar -xzvf spark-3.1.1-bin-hadoop3.2.tgz -C /opt/module
 export SPARK_HOME="/opt/module/spark-3.1.1-bin-hadoop3.2"
 export PATH=$PATH:$SPARK_HOME/bin
 
+
+
+
 wget "http://archive.apache.org/dist/hadoop/common/hadoop-3.1.3/hadoop-3.1.3.tar.gz"
 tar -xzvf hadoop-3.1.3.tar.gz -C /opt/module
 export HADOOP_HOME="/opt/module/hadoop-3.1.3"
