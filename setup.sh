@@ -23,10 +23,14 @@ cp /opt/module/kafka_2.12-2.4.1/libs/kafka-clients-2.4.1.jar .
 ls | grep "kafka"
 # ssc.checkpoint("file:///opt/exp18/kafka/checkpoint")
 mkdir -p /opt/exp18/kafka/checkpoint
+# producer
+cd /workspace/spark-dev/kafka-app/producer
+mvn clean dependency:copy-dependencies package
+spark-submit --class com.esse.ll.KafkaWordProducer ./target/kproducer-1.0-SNAPSHOT.jar localhost:63342  wordsender  3  5
+# consumer
 cd /workspace/spark-dev/kafka-app/app
 mvn clean dependency:copy-dependencies package
 spark-submit --class com.esse.ll.KafkaWordCount ./target/kapp-1.0-SNAPSHOT.jar
-
 
 
 wget "http://archive.apache.org/dist/hadoop/common/hadoop-3.1.3/hadoop-3.1.3.tar.gz"

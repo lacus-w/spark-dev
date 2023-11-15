@@ -1,3 +1,4 @@
+package com.esse.ll
 import java.util.HashMap
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord}
 import org.apache.spark.SparkConf
