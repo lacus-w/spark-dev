@@ -7,6 +7,8 @@ wget "https://archive.apache.org/dist/spark/spark-3.1.1/spark-3.1.1-bin-hadoop3.
 tar -xzvf spark-3.1.1-bin-hadoop3.2.tgz -C /opt/module
 export SPARK_HOME="/opt/module/spark-3.1.1-bin-hadoop3.2"
 export PATH=$PATH:$SPARK_HOME/bin
+brew install netcat
+
 # test spark-submit
 spark-submit --class org.apache.spark.examples.SparkPi  $SPARK_HOME/examples/jars/spark-examples_2.12-3.1.1.jar
 
